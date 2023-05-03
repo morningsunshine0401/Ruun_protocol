@@ -13,18 +13,18 @@ The project consists of the following components:
 
 # 2. Methods
 
-1. Socket Communication: The project uses UDP sockets for sending and receiving messages between the robot and the control station.
+1. Socket Communication: The project uses UDP sockets for sending and receiving messages between the UAVs.
 
 2. Message Integrity: To ensure the integrity of the messages exchanged, a CRC-16 (Cyclic Redundancy Check) checksum is calculated and included in each message.
 
-3. Encryption and Decryption: The ruun_crypto module handles the encryption and decryption of messages using Python-based encryption libraries. This ensures secure communication between the robot and the control station.
+3. Encryption and Decryption: The ruun_crypto module handles the encryption and decryption of messages using a simple XOR calculation. This ensures secure communication between the UAVs.
 
 # 3. Setting Up Your Workspace
 
 To set up your workspace to use this project, follow the steps below:
 
 1. Clone the project repository into your ROS workspace's src directory:
-    cd ~/your_ros_workspace/src
+    cd ~/ruun_ws/src
     git clone https://github.com/your_username/ruun_robotics_project.git
 
 Replace your_ros_workspace with the path to your ROS workspace and your_username with your GitHub username.
@@ -37,7 +37,7 @@ Replace melodic with your ROS distribution if you are using a different version.
 
 3. Build the project:
 
-    cd ~/your_ros_workspace
+    cd ~/ruun_ws
     catkin_make
 
 4. Source the workspace:
