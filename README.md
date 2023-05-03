@@ -7,9 +7,16 @@ The RUUN protocol Project aims to create a robust and efficient communication pr
 
 The project consists of the following components:
 
-1. ruun_protocol_pkg: This package contains the source code for the communication protocol implementation, which includes sending and receiving messages, as well as handling message integrity through checksums.
++ruun_protocol_pkg: This package contains the source code for the communication protocol implementation, which includes sending and receiving messages, as well as handling message integrity through checksums.
+    ++ ruun_protocol.cpp: This file contains code for ROS to subscribe to topics from          PX4, convert the subscribed data into a Ruun_Message format, encrypt it, and then        send the message using UDP.
+    
+    ++ ruun_protocol_recv.cpp: This file contains code for receiving encrypted                                          Ruun_Message instances via UDP, decrypting them, and then                                publishing the corresponding MAVROS message topics using                                ROS.
+    
+    ++ ruun.h: A header file that defines the Ruun_Message format used in the Ruun                      protocol.
+    
+    ++ DoubleXORCipher.h: A header file that provides functions for encrypting and                                 decrypting messages using the Double XOR Cipher algorithm.
 
-2. ruun_crypto: This module provides encryption and decryption functionality for the messages exchanged between the robots and the control stations. It uses Pybind11 to interface between C++ and Python, allowing the use of Python-based encryption libraries.
+
 
 # 2. Methods
 
