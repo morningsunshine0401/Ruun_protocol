@@ -1,4 +1,4 @@
-# Ruun_protocol
+# Ruun protocol
 <img src = "https://user-images.githubusercontent.com/109836008/235913879-c722f793-3a12-4aeb-97f1-bcfe06e1fd46.png" width="40%" height="40%">
 
 The RUUN protocol Project aims to create a robust and efficient communication protocol between UAVs. This protocol allows for real-time data exchange and ensures data integrity through message encryption and checksums. The project leverages ROS (Robot Operating System) for handling the communication framework.
