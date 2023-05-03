@@ -11,11 +11,11 @@ The project consists of the following components:
 
 # 2. Methods
 
-    Socket Communication: The project uses UDP sockets for sending and receiving messages between the robot and the control station.
+1. Socket Communication: The project uses UDP sockets for sending and receiving messages between the robot and the control station.
 
-    Message Integrity: To ensure the integrity of the messages exchanged, a CRC-16 (Cyclic Redundancy Check) checksum is calculated and included in each message.
+2. Message Integrity: To ensure the integrity of the messages exchanged, a CRC-16 (Cyclic Redundancy Check) checksum is calculated and included in each message.
 
-    Encryption and Decryption: The ruun_crypto module handles the encryption and decryption of messages using Python-based encryption libraries. This ensures secure communication between the robot and the control station.
+3. Encryption and Decryption: The ruun_crypto module handles the encryption and decryption of messages using Python-based encryption libraries. This ensures secure communication between the robot and the control station.
 
 # 3. Setting Up Your Workspace
 
