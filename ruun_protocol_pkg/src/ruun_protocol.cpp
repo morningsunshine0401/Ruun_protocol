@@ -83,7 +83,7 @@ int main(int argc, char **argv) {
 
 
 
-  // Convert the message to a byte array
+  // Convert the message to an array
   double buf[sizeof(msg)];
   memcpy(buf, &msg, sizeof(msg));
 
