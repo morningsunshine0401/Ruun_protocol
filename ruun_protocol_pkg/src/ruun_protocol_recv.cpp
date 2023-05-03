@@ -52,7 +52,7 @@ int main(int argc, char** argv) {
       continue;
     }
 
-    // Convert the message from byte array to Message struct
+    // Convert the message from array to Message struct
     Ruun_Message msg;
     memcpy(&msg, buf, sizeof(msg));
     // Compute the checksum of the received message
