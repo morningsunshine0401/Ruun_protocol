@@ -1,13 +1,11 @@
-// Define the data structures for the position, orientation, and heading messages
+// Define the data structures for the position and heading messages
 struct Position {
   double latitude;     
   double longitude;    
-  double altitude;   
-  //double relative_altitude;  
+  double altitude;  
   double vx;  
   double vy;  
   double vz; 
-  //double heading; 
 };
 
 struct Heading {
