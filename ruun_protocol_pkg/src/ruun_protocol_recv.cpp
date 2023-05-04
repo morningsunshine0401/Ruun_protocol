@@ -6,8 +6,7 @@
 #include <mavros_msgs/GlobalPositionTarget.h>
 #include <mavros_msgs/VFR_HUD.h>
 #include "ruun.h"
-
-
+#include "DoubleXORCipher.h"
 
 
 int main(int argc, char** argv) {
@@ -42,6 +41,10 @@ int main(int argc, char** argv) {
   // Initialize the message buffer
   double buf[sizeof(Ruun_Message)]; //THIS MIGHT HAVE TO GO INTO WHILE
 
+  std::vector<double> key = {1.0, 2.0, 3.0, 4.0, 5.0};
+  DoubleXORCipher cipher(key);
+
+
   // Receive messages indefinitely
   while (ros::ok()) {
     // Receive a message from the socket
@@ -51,6 +54,14 @@ int main(int argc, char** argv) {
     if (n < 0) {
       continue;
     }
+
+
+
+    //std::vector<double> data(sizeof(Ruun_Message) / sizeof(double));
+    std::vector<double> data(buf, buf + sizeof(buf) / sizeof(double));
+    cipher.decrypt(data);
+
+    memcpy(buf, data.data(), sizeof(buf));
 
     // Convert the message from array to Message struct
     Ruun_Message msg;
