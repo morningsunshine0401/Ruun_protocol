@@ -7,7 +7,7 @@ The RUUN protocol Project aims to create a robust and efficient communication pr
 
 The project consists of the following components:
 
-## I. ruun_protocol_pkg:
+### I. ruun_protocol_pkg:
 This package contains the source code for the communication protocol implementation, which includes sending and receiving messages, as well as handling message integrity through checksums.
 
 #### II. ruun_protocol.cpp:
