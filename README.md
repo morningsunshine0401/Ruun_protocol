@@ -7,15 +7,20 @@ The RUUN protocol Project aims to create a robust and efficient communication pr
 
 The project consists of the following components:
 
-$$ruun_protocol_pkg: This package contains the source code for the communication protocol implementation, which includes sending and receiving messages, as well as handling message integrity through checksums.
+## ruun_protocol_pkg:
+This package contains the source code for the communication protocol implementation, which includes sending and receiving messages, as well as handling message integrity through checksums.
 
-    $ruun_protocol.cpp: This file contains code for ROS to subscribe to topics from PX4, convert the subscribed data into a Ruun_Message format, encrypt it, and then send the message using UDP.
+#### ruun_protocol.cpp:
+This file contains code for ROS to subscribe to topics from PX4, convert the subscribed data into a Ruun_Message format, encrypt it, and then send the message using UDP.
     
-    $ruun_protocol_recv.cpp: This file contains code for receiving encrypted Ruun_Message instances via UDP, decrypting them, and then publishing the corresponding MAVROS message topics using ROS.
+#### ruun_protocol_recv.cpp: 
+This file contains code for receiving encrypted Ruun_Message instances via UDP, decrypting them, and then publishing the corresponding MAVROS message topics using ROS.
     
-    $ruun.h: A header file that defines the Ruun_Message format used in the Ruun protocol.
+#### ruun.h: 
+A header file that defines the Ruun_Message format used in the Ruun protocol.
     
-    $DoubleXORCipher.h: A header file that provides functions for encrypting and decrypting messages using the Double XOR Cipher algorithm.
+#### DoubleXORCipher.h: 
+A header file that provides functions for encrypting and decrypting messages using the Double XOR Cipher algorithm.
 
 
 
@@ -33,7 +38,7 @@ To set up your workspace to use this project, follow the steps below:
 
 1. Clone the project repository into your ROS workspace's src directory:
     cd ~/ruun_ws/src
-    git clone https://github.com/your_username/ruun_robotics_project.git
+    git clone https://github.com/morningsunshine0401/Ruun_protocol.git
 
 Replace your_ros_workspace with the path to your ROS workspace and your_username with your GitHub username.
 
