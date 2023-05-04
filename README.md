@@ -1,4 +1,4 @@
-# Ruun protocol (Needs to be a bit more organized)
+# Ruun protocol 
 <img src = "https://user-images.githubusercontent.com/109836008/235913879-c722f793-3a12-4aeb-97f1-bcfe06e1fd46.png" width="40%" height="40%">
 
 The RUUN protocol Project aims to create a robust and efficient communication protocol between UAVs. This protocol allows for real-time data exchange and ensures data integrity through message encryption and checksums. The project leverages ROS (Robot Operating System) for handling the communication framework.
@@ -60,4 +60,4 @@ Replace melodic with your ROS distribution if you are using a different version.
     
 5. Run the necessary nodes and launch files as specified in the project documentation.
 
-You are now ready to use the RUUN Robotics Project in your ROS workspace. For more information on how to use the project's components and integrate them into your robotic system, refer to the project's documentation and example implementations.
+You are now ready to use the RUUN Protocol in your ROS workspace. For more information on how to use the project's components and integrate them into your robotic system, refer to the project's documentation and example implementations.
