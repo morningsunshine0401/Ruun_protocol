@@ -11,7 +11,6 @@ The project consists of the following components:
 This package contains the source code for the communication protocol implementation, which includes sending and receiving messages, as well as handling message integrity through checksums.
 
 ## Files:
-
 #### I. ruun_protocol.cpp:
 This file contains code for ROS to subscribe to topics from PX4, convert the subscribed data into a Ruun_Message format, encrypt it, and then send the message using UDP.
     
