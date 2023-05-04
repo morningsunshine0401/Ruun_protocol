@@ -10,16 +10,18 @@ The project consists of the following components:
 ### I. ruun_protocol_pkg:
 This package contains the source code for the communication protocol implementation, which includes sending and receiving messages, as well as handling message integrity through checksums.
 
-#### II. ruun_protocol.cpp:
+## Files:
+
+#### I. ruun_protocol.cpp:
 This file contains code for ROS to subscribe to topics from PX4, convert the subscribed data into a Ruun_Message format, encrypt it, and then send the message using UDP.
     
-#### III. ruun_protocol_recv.cpp: 
+#### II. ruun_protocol_recv.cpp: 
 This file contains code for receiving encrypted Ruun_Message instances via UDP, decrypting them, and then publishing the corresponding MAVROS message topics using ROS.
     
-#### IV. ruun.h: 
+#### III. ruun.h: 
 A header file that defines the Ruun_Message format used in the Ruun protocol.
     
-#### V. DoubleXORCipher.h: 
+#### IV. DoubleXORCipher.h: 
 A header file that provides functions for encrypting and decrypting messages using the Double XOR Cipher algorithm.
 
 
